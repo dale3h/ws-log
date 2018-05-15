@@ -1,0 +1,27 @@
+{
+  "name": "ws-log",
+  "version": "0.1.0",
+  "description": "WebSocket-based remote log viewer (in browser) with style/color keyword filtering",
+  "main": "index.js",
+  "bin": {
+    "ws-log": "./bin/ws-log"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dale3h/ws-log.git"
+  },
+  "keywords": [],
+  "author": "Dale Higgs <@dale3h>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dale3h/ws-log/issues"
+  },
+  "homepage": "https://github.com/dale3h/ws-log",
+  "dependencies": {
+    "debug": "^3.1.0",
+    "express": "^4.16.3",
+    "express-ws": "^3.0.0",
+    "tail": "^1.2.3",
+    "yargs": "^11.0.0"
+  }
+}

@@ -1,0 +1,67 @@
+html, body, .wrapper {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: #2b2b2b;
+  color: #d2d2d2;
+  font-family: monospace;
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.spacer {
+  height: 15px;
+}
+
+.status-bar {
+  background: #457bb1;
+  padding: 2px;
+}
+
+.status, .command {
+  margin: 0 2px;
+}
+
+.commands {
+  background-color: inherit;
+  color: inherit;
+  float: right;
+}
+
+.command {
+  cursor: pointer;
+}
+
+.command:hover {
+  background-color: #255b91;
+}
+
+.hotkey {
+  padding: 0 1px;
+  margin: 0 5px 0 10px;
+}
+
+.log {
+  flex: 1;
+  overflow: auto;
+}
+
+.log-line {
+  -webkit-transition: background 0.5s linear;
+  -moz-transition: background 0.5s linear;
+  -ms-transition: background 0.5s linear;
+  -o-transition: background 0.5s linear;
+  transition: background 0.5s linear;
+  white-space: pre-wrap;
+}
+
+.highlight {
+  background: dimgray;
+}
