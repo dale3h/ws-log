@@ -5,6 +5,7 @@ process.env['DEBUG'] = '*,-send,-express:*';
 
 // Module includes
 const express = require('express');
+const basicAuth = require('express-basic-auth');
 const http = require('http');
 const https = require('https');
 const fs = require('fs');
@@ -30,6 +31,18 @@ const tailOpts = {
 };
 
 var logLines = [];
+
+// User authentication
+if (config.user && config.password) {
+  users = {};
+  users[config.user] = config.password;
+
+  app.use(basicAuth({
+    users: users,
+    challenge: true,
+    realm: 'Secure Area',
+  }));
+}
 
 // Webserver
 var server;

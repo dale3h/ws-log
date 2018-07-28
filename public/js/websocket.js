@@ -173,9 +173,9 @@
     ws.close();
   });
 
-  Commands.add('Manage Filters', 'f', (cmd, e) => {
-    console.log("%s is not yet implemented.", cmd.name);
-  });
+  // Commands.add('Manage Filters', 'f', (cmd, e) => {
+  //   console.log("%s is not yet implemented.", cmd.name);
+  // });
 
   Commands.add('Enable Autoscroll', 's', (cmd, e) => {
     autoScroll = true;
