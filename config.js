@@ -1,4 +1,5 @@
 const pkg = require('./package.json');
+const LINES = process.env.WS_LINES || 5;
 
 module.exports = require('yargs')
   .env('LOGVIEWER')
@@ -23,8 +24,14 @@ module.exports = require('yargs')
     v: 'version',
   })
   .default({
+    'user': process.env.WS_USER,
+    'password': process.env.WS_PASSWORD,
+    'ssl': process.env.WS_SSL,
+    'certfile': process.env.WS_CERTFILE,
+    'keyfile': process.env.WS_KEYFILE,
+    'filters': process.env.WS_FILTERS,
     'port': 4277,
-    'lines': 5,
+    'lines': LINES,
   })
   .version()
   .help('help')
