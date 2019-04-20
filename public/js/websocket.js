@@ -4,7 +4,13 @@
   var reconnect = true;
   var ws;
 
-  var wsUrl = window.location.origin.replace(/^http/, 'ws');
+  var loc = window.location, wsUrl;
+  if (loc.protocol == "https:") {
+    wsUrl = "wss:";
+  } else {
+    wsUrl = "ws:";
+  }
+  wsUrl += "//" + loc.host + loc.pathname;
 
   function setStatus(status) {
     $('.status').html(status);
